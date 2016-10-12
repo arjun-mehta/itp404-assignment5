@@ -1,0 +1,13 @@
+<h2>Artists</h2>
+
+{{outlet}}
+
+{{#if model}}
+  {{#each model.artists as |a|}}
+    <div class="list">
+      <li>{{#link-to 'artists.artist' a.id }}{{a.name}}{{/link-to}}</li>
+    </div>
+  {{else}}
+    <p>Not found</p>
+  {{/each}}
+{{/if}}

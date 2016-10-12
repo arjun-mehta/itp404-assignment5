@@ -1,0 +1,11 @@
+<strong>{{model.artists.name}} has {{model.songs.length}} songs.</strong>
+
+{{#each model.songs as |s|}}
+  {{#song-item song=s}}{{/song-item}}
+{{/each}}
+
+{{else}}
+  <p>Not found</p>
+{{/each}}
+
+{{outlet}}
